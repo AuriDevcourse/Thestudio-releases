@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Download TechBBQ Studio</title>
+<meta name="description" content="TechBBQ Studio for Windows and Mac: your tools, your drafts and your connections, all on your computer.">
+<meta name="robots" content="noindex">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<style>
+@font-face{font-family:Onest;font-weight:400;font-display:swap;src:url(assets/Onest-400.ttf) format("truetype")}
+@font-face{font-family:Onest;font-weight:500;font-display:swap;src:url(assets/Onest-500.ttf) format("truetype")}
+@font-face{font-family:Onest;font-weight:600;font-display:swap;src:url(assets/Onest-600.ttf) format("truetype")}
+:root{--garage:#0D0D0D;--backstage:#131313;--spotlight:#F2F2F2;--red:#CE0F2E;--grit:#5E101A;--success:#00C11A;--spark:#FD9D04;
+  --t70:rgba(242,242,242,.7);--t50:rgba(242,242,242,.5);--hair:rgba(242,242,242,.4);--glass:rgba(13,13,13,.55);
+  --ease:cubic-bezier(.22,1,.36,1)}
+*{box-sizing:border-box}
+html{background:var(--garage);color:var(--spotlight);font:400 16px/1.5 Onest,system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+body{margin:0;min-height:100vh;display:flex;flex-direction:column;background:var(--garage) url(assets/orb.webp) center top/cover no-repeat fixed}
+body::before{content:"";position:fixed;inset:0;background:linear-gradient(180deg,rgba(13,13,13,.25),rgba(13,13,13,.78) 70%);pointer-events:none}
+header,main,footer{position:relative;width:min(960px,100% - 48px);margin:0 auto}
+header{padding:32px 0 0}
+header img{height:36px;display:block}
+main{flex:1;padding:64px 0 48px}
+h1{margin:0 0 16px;font:600 clamp(40px,7vw,72px)/1.05 Onest,sans-serif;letter-spacing:-.02em}
+.lead{margin:0 0 48px;max-width:560px;font-size:clamp(17px,2.2vw,20px);color:var(--t70)}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:16px}
+.card{display:flex;flex-direction:column;gap:16px;padding:32px;border-radius:24px;background:var(--glass);-webkit-backdrop-filter:blur(24px);backdrop-filter:blur(24px);box-shadow:inset 0 0 0 1px rgba(242,242,242,.12);transition:box-shadow .2s var(--ease),transform .2s var(--ease)}
+.card.rec{box-shadow:inset 0 0 0 1.5px var(--spotlight)}
+.card h2{margin:0;display:flex;align-items:center;gap:12px;font:600 24px/1.2 Onest,sans-serif}
+.card h2 svg{width:28px;height:28px;flex:none}
+.tag{margin-left:auto;padding:2px 10px;border-radius:999px;background:rgba(242,242,242,.14);font:500 12px/1.6 Onest,sans-serif;color:var(--spotlight)}
+.meta{margin:0;color:var(--t70);font-size:14px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:52px;padding:0 28px;border-radius:999px;border:0;background:var(--spotlight);color:#0D0D0D;font:500 16px Onest,sans-serif;text-decoration:none;cursor:pointer;transition:background .2s var(--ease),color .2s var(--ease),transform .2s var(--ease)}
+.btn:hover{background:var(--red);color:var(--spotlight)}
+.btn:active{transform:scale(.98)}
+.btn:focus-visible,a:focus-visible,summary:focus-visible{outline:2px solid var(--spotlight);outline-offset:3px}
+.btn svg{width:18px;height:18px}
+.btn[aria-disabled=true]{opacity:.6;pointer-events:none}
+.steps{margin:0;padding:0 0 0 20px;color:var(--t70);font-size:14px;display:grid;gap:4px}
+.steps b{color:var(--spotlight);font-weight:500}
+.note{margin:0;padding:12px 16px;border-radius:12px;background:rgba(253,157,4,.12);color:var(--spotlight);font-size:14px}
+.note::before{content:"";display:inline-block;width:6px;height:6px;margin-right:10px;border-radius:50%;background:var(--spark);vertical-align:2px}
+.info{margin:48px 0 0;display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:32px}
+.info h3{margin:0 0 4px;font:500 16px Onest,sans-serif}
+.info p{margin:0;color:var(--t70);font-size:14px}
+.rel{margin-top:32px;font-size:14px;color:var(--t50)}
+.rel a,footer a{color:var(--t70);text-decoration:underline;text-underline-offset:3px}
+.rel a:hover,footer a:hover{color:var(--spotlight)}
+footer{padding:24px 0 32px;color:var(--t50);font-size:13px;border-top:1px solid rgba(242,242,242,.12)}
+.rise{opacity:0;transform:translateY(12px);animation:rise .52s var(--ease) forwards;animation-delay:calc(var(--i,0) * 70ms)}
+@keyframes rise{to{opacity:1;transform:none}}
+.skel{display:inline-block;width:120px;height:14px;border-radius:7px;background:linear-gradient(90deg,rgba(242,242,242,.08),rgba(242,242,242,.18),rgba(242,242,242,.08));background-size:200% 100%;animation:sh 1.4s linear infinite;vertical-align:middle}
+@keyframes sh{to{background-position:-200% 0}}
+@media (prefers-reduced-motion:reduce){.rise{animation:none;opacity:1;transform:none}.skel{animation:none}.btn,.card{transition:none}}
+@media (max-width:560px){main{padding-top:40px}.card{padding:24px}}
+</style>
+</head>
+<body>
+<header class="rise"><img src="assets/logo-white.svg" alt="TechBBQ"></header>
+<main>
+  <h1 class="rise" style="--i:1">TechBBQ Studio</h1>
+  <p class="lead rise" style="--i:2">Your tools, your drafts and your connections, all on your computer. Download it, sign in with your TechBBQ Google account, and the app guides you through the rest.</p>
+
+  <div class="cards">
+    <section class="card rise" id="win" style="--i:3" aria-labelledby="wh">
+      <h2 id="wh"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M3 5.5l8-1.1v7.1H3zM12 4.3L21 3v8.5h-9zM3 12.5h8v7.1l-8-1.1zM12 12.5h9V21l-9-1.3z"/></svg>Windows<span class="tag" hidden>Your computer</span></h2>
+      <p class="meta">Windows 10 or 11<br><span class="vw"><span class="skel"></span></span></p>
+      <a class="btn" id="bw" href="https://github.com/AuriDevcourse/Thestudio-releases/releases/latest" download><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4v11M7 11l5 5 5-5M5 20h14"/></svg>Download for Windows</a>
+      <ol class="steps"><li>Open the downloaded <b>.exe</b>.</li><li>If Windows says it protected your PC, press <b>More info</b>, then <b>Run anyway</b>.</li><li>Open <b>TechBBQ Studio</b> and sign in.</li></ol>
+    </section>
+
+    <section class="card rise" id="mac" style="--i:4" aria-labelledby="mh">
+      <h2 id="mh"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16.4 12.7c0-2.3 1.9-3.4 2-3.5-1.1-1.600-2.800-1.800-3.400-1.800-1.400-.1-2.800.9-3.500.9-.7 0-1.800-.8-3-.8-1.500 0-3 .9-3.800 2.300-1.600 2.800-.4 7 1.200 9.300.8 1.100 1.700 2.400 2.900 2.300 1.200 0 1.600-.7 3-.7s1.800.7 3 .7c1.300 0 2.100-1.100 2.800-2.200.9-1.300 1.300-2.500 1.300-2.600-.1 0-2.500-1-2.500-3.900zM14.100 5.800c.6-.8 1.100-1.800.9-2.900-.9 0-2 .6-2.700 1.400-.6.700-1.100 1.800-1 2.800 1 .1 2.100-.5 2.800-1.300z"/></svg>Mac<span class="tag" hidden>Your computer</span></h2>
+      <p class="meta">Apple silicon and Intel<br><span class="vm"><span class="skel"></span></span></p>
+      <a class="btn" id="bm" href="https://github.com/AuriDevcourse/Thestudio-releases/releases/latest" download><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4v11M7 11l5 5 5-5M5 20h14"/></svg>Download for Mac</a>
+      <ol class="steps"><li>Open the downloaded <b>.dmg</b> and drag Studio to <b>Applications</b>.</li><li>The first time, <b>right-click</b> the app and choose <b>Open</b>, then <b>Open</b> again.</li><li>Sign in. After that it opens like any app.</li></ol>
+    </section>
+  </div>
+
+  <p class="note rise" style="--i:5;margin-top:16px" id="phone" hidden>Studio is for computers. Open this page on your Windows PC or Mac to download it.</p>
+
+  <div class="info">
+    <div class="rise" style="--i:6"><h3>Sign in with Google</h3><p>Use your TechBBQ account. Studio only asks for your name and email to sign you in. Calendar and other tools are connected later, one at a time.</p></div>
+    <div class="rise" style="--i:7"><h3>Updates come by themselves</h3><p>When a new version is ready, Studio tells you and updates in two clicks. Your sign-in, chats and settings stay.</p></div>
+    <div class="rise" style="--i:8"><h3>Stays on your computer</h3><p>Chats, drafts and connection tokens are stored on your computer, encrypted where they are sensitive.</p></div>
+  </div>
+  <p class="rel rise" style="--i:9" id="rel">Need an older version or the release notes? <a href="https://github.com/AuriDevcourse/Thestudio-releases/releases">All releases</a>.</p>
+</main>
+<footer>TechBBQ Studio · built by TechBBQ Digital &amp; Technology · Questions? Ask in Slack.</footer>
+<script>
+(function(){
+  var REPO='AuriDevcourse/Thestudio-releases', ua=navigator.userAgent||'', plat=(navigator.userAgentData&&navigator.userAgentData.platform)||navigator.platform||'';
+  var mobile=/iPhone|iPad|iPod|Android/i.test(ua), isMac=!mobile&&/Mac/i.test(plat+ua), isWin=!mobile&&/Win/i.test(plat+ua);
+  function mb(n){return Math.round(n/1048576)+' MB'}
+  function fill(id,txt){var e=document.querySelector(id);if(e)e.textContent=txt}
+  function markMine(){
+    var mine=isMac?'mac':isWin?'win':'';
+    if(mine){var c=document.getElementById(mine);c.classList.add('rec');c.querySelector('.tag').hidden=false;
+      var g=c.parentNode;g.insertBefore(c,g.firstChild)}   // your computer first
+    if(mobile)document.getElementById('phone').hidden=false}
+  markMine();
+  fetch('https://api.github.com/repos/'+REPO+'/releases/latest',{headers:{Accept:'application/vnd.github+json'}}).then(function(r){if(!r.ok)throw 0;return r.json()}).then(function(j){
+    var a=j.assets||[],exe=a.filter(function(x){return /Setup.*\.exe$/.test(x.name)})[0],dmg=a.filter(function(x){return /\.dmg$/.test(x.name)})[0],v=(j.tag_name||'').replace(/^v/,''),d=j.published_at?new Date(j.published_at).toLocaleDateString('en-GB',{day:'numeric',month:'long',year:'numeric'}):'';
+    if(exe){document.getElementById('bw').href=exe.browser_download_url;fill('.vw','Version '+v+' · '+mb(exe.size)+(d?' · '+d:''))}else fill('.vw','Version '+v);
+    if(dmg){document.getElementById('bm').href=dmg.browser_download_url;fill('.vm','Version '+v+' · '+mb(dmg.size)+(d?' · '+d:''))}else fill('.vm','Version '+v);
+  }).catch(function(){fill('.vw','Latest version');fill('.vm','Latest version');   // no API (limit or offline): the buttons still lead to the release page
+    document.getElementById('bw').removeAttribute('download');document.getElementById('bm').removeAttribute('download')});
+})();
+</script>
+</body>
+</html>
