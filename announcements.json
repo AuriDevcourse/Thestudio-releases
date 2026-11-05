@@ -1,23 +1,16 @@
 [
  {
+  "id": "welcome01",
+  "title": "Welcome to Studio",
+  "text": "Press the bell any time for news from us. Use Report a problem or idea if something looks off.",
+  "link": "",
+  "at": 1793870330488
+ },
+ {
   "id": "20448f0b",
   "title": "HEY RUNE, HOW ARE YOU?",
   "text": "HEY RUNE, HOW ARE YOU?",
   "link": "",
   "at": 1793707675951
- },
- {
-  "id": "23ee06d2",
-  "title": "QA test, ignore",
-  "text": "Automatic check. Removed in seconds.",
-  "link": "",
-  "at": 1793375319900
- },
- {
-  "id": "4f647393",
-  "title": "Sadia is the BEST",
-  "text": "No, for real.",
-  "link": "",
-  "at": 1793374196334
  }
 ]
